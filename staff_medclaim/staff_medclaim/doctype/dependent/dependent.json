@@ -1,0 +1,88 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "dep_id",
+ "creation": "2026-05-25 12:13:44.141605",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "name_with_initials",
+  "relationship",
+  "date_of_birth",
+  "marriage_birth_certificate",
+  "attach",
+  "remarks",
+  "dep_id",
+  "row_status"
+ ],
+ "fields": [
+  {
+   "fieldname": "name_with_initials",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Name with Initials",
+   "reqd": 1
+  },
+  {
+   "fieldname": "relationship",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Relationship",
+   "options": "Spouse\nDaughter\nSon",
+   "reqd": 1
+  },
+  {
+   "fieldname": "date_of_birth",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Date of Birth",
+   "reqd": 1
+  },
+  {
+   "fieldname": "marriage_birth_certificate",
+   "fieldtype": "Attach",
+   "label": "NIC/ Birth Certificate",
+   "reqd": 1
+  },
+  {
+   "fieldname": "attach",
+   "fieldtype": "Button",
+   "hidden": 1,
+   "label": "Attach"
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Small Text",
+   "label": "Remarks"
+  },
+  {
+   "fieldname": "dep_id",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Dep ID",
+   "unique": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "row_status",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Row Status",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2026-11-04 13:08:23.862125",
+ "modified_by": "Administrator",
+ "module": "Staff MedClaim",
+ "name": "Dependent",
+ "naming_rule": "Autoincrement",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

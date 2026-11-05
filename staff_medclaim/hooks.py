@@ -5,6 +5,72 @@ app_description = "Medical insurance claim management for employees and their de
 app_email = "you@example.com"
 app_license = "MIT"
 
+# Required Apps
+# -------------
+# Employee, Purchase Order, Journal Entry, Company, Supplier come from ERPNext.
+# Add "hrms" only if you install HRMS and want it enforced.
+required_apps = ["erpnext"]
+
+# Fixtures
+# --------
+# Exported with: bench --site <site> export-fixtures --app staff_medclaim
+fixtures = [
+    # Roles used by this app
+    {"dt": "Role", "filters": [["name", "in", [
+        "Insurance Member",
+        "Insurance User",
+        "Insurance Manager",
+    ]]]},
+
+    # Permissions set in Role Permissions Manager on this app's DocTypes
+    # (includes rows for System Manager, HR Manager, HR User, Accounts User, Employee)
+    {"dt": "Custom DocPerm", "filters": [["parent", "in", [
+        "Claim Approval",
+        "Claim Summary",
+        "Employee Claim Group",
+        "Employee Details",
+        "Insurance Claim",
+        "Insurance Form",
+        "Insurance Member",
+        "Insurance Period",
+        "Insurance Scheme",
+        "Support Scheme",
+    ]]]},
+
+    # Custom fields on STANDARD doctypes that your scripts use
+    # (Company, Purchase Order, Supplier, Journal Entry).
+    # Filtered by fieldname so it works even if Module is empty.
+    {"dt": "Custom Field", "filters": [["fieldname", "in", [
+        "custom_journal_entry_debit_account",
+        "custom_insurance_expense_account",
+        "custom_insurance_payable_account",
+        "custom_item_group",
+        "custom_salutation",
+        "custom_document_refno",
+    ]]]},
+
+    # List View Settings changes (in_list_view) on this app's DocTypes.
+    # These have an empty Module, so they are filtered by DocType instead.
+    {"dt": "Property Setter", "filters": [["doc_type", "in", [
+        "Claim Approval",
+        "Claim Summary",
+        "Employee Claim Group",
+        "Employee Details",
+        "Insurance Claim",
+        "Insurance Form",
+        "Insurance Member",
+        "Insurance Period",
+        "Insurance Scheme",
+        "Support Scheme",
+    ]]]},
+
+    # Scripts, reports and print formats (all have Module = Staff MedClaim)
+    {"dt": "Client Script", "filters": [["module", "=", "Staff MedClaim"]]},
+    {"dt": "Server Script", "filters": [["module", "=", "Staff MedClaim"]]},
+    {"dt": "Report", "filters": [["module", "=", "Staff MedClaim"]]},
+    {"dt": "Print Format", "filters": [["module", "=", "Staff MedClaim"]]},
+]
+
 # Includes in <head>
 # ------------------
 

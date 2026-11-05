@@ -1,0 +1,82 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2026-06-01 05:48:56.912788",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "covers",
+  "short_name",
+  "limit_rs",
+  "skip_period",
+  "max_days_per_event",
+  "per_event",
+  "per_period"
+ ],
+ "fields": [
+  {
+   "fieldname": "covers",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Covers",
+   "options": "Covers and Benefits",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "covers.c_name",
+   "fieldname": "short_name",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "in_list_view": 1,
+   "label": "Short Name"
+  },
+  {
+   "fieldname": "limit_rs",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Limit (Rs.)"
+  },
+  {
+   "fieldname": "skip_period",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Skip period"
+  },
+  {
+   "fieldname": "max_days_per_event",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Max days per event"
+  },
+  {
+   "default": "0",
+   "fetch_from": "covers.per_event",
+   "fieldname": "per_event",
+   "fieldtype": "Check",
+   "label": "Per Event",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fetch_from": "covers.per_period",
+   "fieldname": "per_period",
+   "fieldtype": "Check",
+   "label": "Per Period",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2026-11-04 13:09:52.257831",
+ "modified_by": "Administrator",
+ "module": "Staff MedClaim",
+ "name": "Limits and Benefits",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

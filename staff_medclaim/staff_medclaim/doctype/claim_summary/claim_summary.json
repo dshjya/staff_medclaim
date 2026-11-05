@@ -1,0 +1,133 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:year_month_id",
+ "creation": "2026-06-06 11:51:33.890570",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "year_month_id",
+  "created_date",
+  "printed_date",
+  "no_of_members",
+  "group_report",
+  "summary_report",
+  "approved_summary_report",
+  "summary_status",
+  "section_break_6yfot",
+  "journal_entry_created",
+  "column_break_ldequ",
+  "journal_entry",
+  "column_break_2up3n",
+  "total_claim_amount"
+ ],
+ "fields": [
+  {
+   "fieldname": "year_month_id",
+   "fieldtype": "Data",
+   "label": "Year/ Month",
+   "read_only": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "created_date",
+   "fieldtype": "Data",
+   "label": "Created date",
+   "read_only": 1
+  },
+  {
+   "fieldname": "printed_date",
+   "fieldtype": "Data",
+   "label": "Last Printed Date",
+   "read_only": 1
+  },
+  {
+   "fieldname": "no_of_members",
+   "fieldtype": "Data",
+   "label": "No of Members",
+   "read_only": 1
+  },
+  {
+   "fieldname": "group_report",
+   "fieldtype": "Button",
+   "label": "Group Report"
+  },
+  {
+   "fieldname": "summary_report",
+   "fieldtype": "Button",
+   "label": "Summary Report"
+  },
+  {
+   "fieldname": "approved_summary_report",
+   "fieldtype": "Button",
+   "label": "Approved Summary Report - Finance"
+  },
+  {
+   "fieldname": "summary_status",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Summary Status",
+   "options": "Not Downloaded\nDownloaded",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_6yfot",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "journal_entry_created",
+   "fieldtype": "Check",
+   "label": "Journal Entry Created",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_ldequ",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "journal_entry",
+   "fieldtype": "Data",
+   "label": "Journal Entry",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_2up3n",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "total_claim_amount",
+   "fieldtype": "Currency",
+   "label": "Total Claim Amount",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-11-04 13:07:27.234998",
+ "modified_by": "Administrator",
+ "module": "Staff MedClaim",
+ "name": "Claim Summary",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

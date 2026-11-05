@@ -1,0 +1,100 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2026-06-01 20:04:59.594526",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "employee",
+  "cover",
+  "section_break_ertuw",
+  "limit",
+  "column_break_elrjg",
+  "claimed",
+  "column_break_vr2ck",
+  "balance",
+  "section_break_nf15j",
+  "pending",
+  "column_break_butyb"
+ ],
+ "fields": [
+  {
+   "fieldname": "employee",
+   "fieldtype": "Link",
+   "label": "Employee",
+   "options": "Insurance Member"
+  },
+  {
+   "fieldname": "cover",
+   "fieldtype": "Select",
+   "label": "Cover"
+  },
+  {
+   "fieldname": "section_break_ertuw",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "limit",
+   "fieldtype": "Currency",
+   "label": "Limit"
+  },
+  {
+   "fieldname": "column_break_elrjg",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "claimed",
+   "fieldtype": "Currency",
+   "label": "Claimed"
+  },
+  {
+   "fieldname": "column_break_vr2ck",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "balance",
+   "fieldtype": "Currency",
+   "label": "Balance"
+  },
+  {
+   "fieldname": "section_break_nf15j",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "pending",
+   "fieldtype": "Currency",
+   "label": "Pending"
+  },
+  {
+   "fieldname": "column_break_butyb",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-11-04 13:10:59.839475",
+ "modified_by": "Administrator",
+ "module": "Staff MedClaim",
+ "name": "Claim Balance",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}
