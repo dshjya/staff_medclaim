@@ -1,0 +1,177 @@
+{
+ "actions": [],
+ "autoname": "field:emp_no",
+ "creation": "2026-05-25 12:17:04.332346",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "verify_section",
+  "column_break_5ol9w",
+  "column_break_jxnvd",
+  "column_break_2mxr5",
+  "verify",
+  "column_break_9w4ea",
+  "approve",
+  "employee_details_section",
+  "employee",
+  "emp_name",
+  "birth_certificate",
+  "nic",
+  "marital_status",
+  "marriage_certificate",
+  "dependents_details_section",
+  "dependents",
+  "emp_no",
+  "amended_from",
+  "attachment"
+ ],
+ "fields": [
+  {
+   "fieldname": "verify_section",
+   "fieldtype": "Section Break",
+   "label": "Verification"
+  },
+  {
+   "fieldname": "column_break_5ol9w",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_jxnvd",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_2mxr5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "verify",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Verified with Personal File"
+  },
+  {
+   "fieldname": "column_break_9w4ea",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "approve",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Approved by Head/ Establishment"
+  },
+  {
+   "fieldname": "employee_details_section",
+   "fieldtype": "Section Break",
+   "label": "Employee Details"
+  },
+  {
+   "fieldname": "employee",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Employee",
+   "options": "Employee",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "employee.first_name",
+   "fieldname": "emp_name",
+   "fieldtype": "Data",
+   "label": "Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "birth_certificate",
+   "fieldtype": "Attach",
+   "label": "Birth Certificate",
+   "reqd": 1
+  },
+  {
+   "fieldname": "nic",
+   "fieldtype": "Attach",
+   "label": "NIC",
+   "reqd": 1
+  },
+  {
+   "fieldname": "marital_status",
+   "fieldtype": "Select",
+   "label": "Marital Status",
+   "options": "\nSingle\nMarried\nDivorced\nWidowed",
+   "reqd": 1
+  },
+  {
+   "fieldname": "marriage_certificate",
+   "fieldtype": "Attach",
+   "label": "Marriage Certificate",
+   "read_only": 1
+  },
+  {
+   "fieldname": "dependents_details_section",
+   "fieldtype": "Section Break",
+   "label": "Dependents Details"
+  },
+  {
+   "fieldname": "dependents",
+   "fieldtype": "Table",
+   "label": "Add details of Dependents",
+   "options": "Dependent"
+  },
+  {
+   "fetch_from": "employee.employee",
+   "fieldname": "emp_no",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Emp No",
+   "unique": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Employee Details",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "attachment",
+   "fieldtype": "Attach",
+   "hidden": 1,
+   "label": "Attachment"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2026-11-04 13:08:14.593776",
+ "modified_by": "Administrator",
+ "module": "Staff MedClaim",
+ "name": "Employee Details",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

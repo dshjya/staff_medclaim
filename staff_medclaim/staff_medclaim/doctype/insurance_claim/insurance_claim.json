@@ -1,0 +1,532 @@
+{
+ "actions": [],
+ "allow_import": 1,
+ "autoname": "format:HR-CLM-{YYYY}-{#####}",
+ "creation": "2026-06-01 21:11:21.964824",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "acceptance_of_claim_section",
+  "claim_status",
+  "column_break_diwwm",
+  "checked_by_officer",
+  "column_break_fqf9b",
+  "checked_by_manager",
+  "column_break_b52tg",
+  "group_no",
+  "column_break_cacgu",
+  "group_month",
+  "balance_section",
+  "cover_balance",
+  "main_section",
+  "employee",
+  "empins",
+  "employee_name",
+  "insurance_period",
+  "claim_type",
+  "opd_section",
+  "details_regarding_bills",
+  "out_section",
+  "amount_m",
+  "column_break_dfcy8",
+  "accepted_amount",
+  "column_break_7mvuc",
+  "approved_amount",
+  "in_section",
+  "category",
+  "dependent_section",
+  "dependent_name",
+  "column_break_32tya",
+  "relationship",
+  "injury_section",
+  "place_of_accident",
+  "precisely_how_the_accident_occurred",
+  "column_break_nnwaj",
+  "date_of_accident",
+  "nature_and_extent_of_injuries",
+  "illness_section",
+  "nature_of_description_of_illness",
+  "date_of_commencement_of_illness",
+  "column_break_9eph4",
+  "name_and_the_address_of_doctor_who_was_first_consulted",
+  "date_of_first_consultation_regarding_this_illness",
+  "period_section",
+  "from",
+  "column_break_ilzer",
+  "to",
+  "general_info_section",
+  "checkbox_1",
+  "previous_illness",
+  "checkbox_2",
+  "past_illness",
+  "checkbox_3",
+  "previous_insurance_claim",
+  "checkbox_4",
+  "checkbox_6",
+  "nature_of_illness",
+  "nature_of_treatment",
+  "name_of_hospital_concerned_if_any",
+  "other_details",
+  "surgical_section",
+  "amount",
+  "agrahara_settled_amount",
+  "amount_s",
+  "column_break_farl5",
+  "approved_amount_s",
+  "file_section",
+  "claim_files",
+  "amend_section",
+  "amended_from",
+  "attachment"
+ ],
+ "fields": [
+  {
+   "fieldname": "acceptance_of_claim_section",
+   "fieldtype": "Section Break",
+   "label": "Acceptance of Claim"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "claim_status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Claim Status",
+   "options": "Draft\nSubmitted\nPartially Checked\nDeclined by Officer\nAccepted by Officer\nDeclined by Manager\nAccepted by Manager\nSent to Doctor\nApproved\nRejected\nCancelled by Manager\nCancelled by Officer\nBalance BF",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_diwwm",
+   "fieldtype": "Column Break"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "checked_by_officer",
+   "fieldtype": "Select",
+   "label": "Officer",
+   "options": "\nAccepted\nDeclined",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_fqf9b",
+   "fieldtype": "Column Break"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "checked_by_manager",
+   "fieldtype": "Select",
+   "label": "Manager",
+   "options": "\nAccepted\nDeclined",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_b52tg",
+   "fieldtype": "Column Break"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "group_no",
+   "fieldtype": "Link",
+   "label": "Group no.",
+   "options": "Employee Claim Group",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_cacgu",
+   "fieldtype": "Column Break"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "group_month",
+   "fieldtype": "Data",
+   "label": "Group Month",
+   "read_only": 1
+  },
+  {
+   "fieldname": "balance_section",
+   "fieldtype": "Section Break",
+   "label": "Cover Balances"
+  },
+  {
+   "fieldname": "cover_balance",
+   "fieldtype": "HTML",
+   "label": "Cover Balance",
+   "read_only": 1
+  },
+  {
+   "fieldname": "main_section",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "employee",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Membership No.",
+   "options": "Insurance Member",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "employee.employee",
+   "fieldname": "empins",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Employee",
+   "options": "Employee",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fetch_from": "empins.first_name",
+   "fieldname": "employee_name",
+   "fieldtype": "Data",
+   "label": "Employee Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "insurance_period",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Insurance Period",
+   "options": "Insurance Period",
+   "read_only": 1
+  },
+  {
+   "fieldname": "claim_type",
+   "fieldtype": "Link",
+   "label": "Form Type",
+   "options": "Insurance Form",
+   "reqd": 1
+  },
+  {
+   "fieldname": "opd_section",
+   "fieldtype": "Section Break",
+   "hidden": 1
+  },
+  {
+   "fieldname": "details_regarding_bills",
+   "fieldtype": "Table",
+   "label": "Details regarding bills",
+   "options": "Claim Bills"
+  },
+  {
+   "fieldname": "out_section",
+   "fieldtype": "Section Break",
+   "hidden": 1
+  },
+  {
+   "fieldname": "amount_m",
+   "fieldtype": "Currency",
+   "label": "Amount",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_dfcy8",
+   "fieldtype": "Column Break"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "accepted_amount",
+   "fieldtype": "Currency",
+   "label": "Accepted Amount",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_7mvuc",
+   "fieldtype": "Column Break"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "approved_amount",
+   "fieldtype": "Currency",
+   "label": "Approved Amount",
+   "read_only": 1
+  },
+  {
+   "fieldname": "in_section",
+   "fieldtype": "Section Break",
+   "hidden": 1
+  },
+  {
+   "fieldname": "category",
+   "fieldtype": "Link",
+   "label": "Category",
+   "options": "Covers and Benefits"
+  },
+  {
+   "fieldname": "dependent_section",
+   "fieldtype": "Section Break",
+   "hidden": 1,
+   "label": "Dependent (Subject in respect of whom claim is made)"
+  },
+  {
+   "fieldname": "dependent_name",
+   "fieldtype": "Select",
+   "label": "Dependent Name"
+  },
+  {
+   "fieldname": "column_break_32tya",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "relationship",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Relationship"
+  },
+  {
+   "fieldname": "injury_section",
+   "fieldtype": "Section Break",
+   "hidden": 1,
+   "label": "Injury (Please state)"
+  },
+  {
+   "fieldname": "place_of_accident",
+   "fieldtype": "Data",
+   "label": "Place of Accident"
+  },
+  {
+   "fieldname": "precisely_how_the_accident_occurred",
+   "fieldtype": "Small Text",
+   "label": "Precisely how the Accident occurred"
+  },
+  {
+   "fieldname": "column_break_nnwaj",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "date_of_accident",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "fieldname": "nature_and_extent_of_injuries",
+   "fieldtype": "Small Text",
+   "label": "Nature and Extent of Injuries"
+  },
+  {
+   "fieldname": "illness_section",
+   "fieldtype": "Section Break",
+   "hidden": 1,
+   "label": "Illness (Please state)"
+  },
+  {
+   "fieldname": "nature_of_description_of_illness",
+   "fieldtype": "Small Text",
+   "label": "Nature of Description of illness"
+  },
+  {
+   "fieldname": "date_of_commencement_of_illness",
+   "fieldtype": "Data",
+   "label": "Date of Commencement of illness"
+  },
+  {
+   "fieldname": "column_break_9eph4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "name_and_the_address_of_doctor_who_was_first_consulted",
+   "fieldtype": "Small Text",
+   "label": "Name and the address of doctor who was first consulted"
+  },
+  {
+   "fieldname": "date_of_first_consultation_regarding_this_illness",
+   "fieldtype": "Data",
+   "label": "Date of first consultation regarding this illness"
+  },
+  {
+   "fieldname": "period_section",
+   "fieldtype": "Section Break",
+   "hidden": 1,
+   "label": "Period of Hospitalization"
+  },
+  {
+   "fieldname": "from",
+   "fieldtype": "Data",
+   "label": "From"
+  },
+  {
+   "fieldname": "column_break_ilzer",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "to",
+   "fieldtype": "Data",
+   "label": "To"
+  },
+  {
+   "fieldname": "general_info_section",
+   "fieldtype": "Section Break",
+   "hidden": 1,
+   "label": "General Information"
+  },
+  {
+   "default": "0",
+   "fieldname": "checkbox_1",
+   "fieldtype": "Check",
+   "label": "Have you ever had the same illness before?"
+  },
+  {
+   "depends_on": "eval:doc.checkbox_1",
+   "fieldname": "previous_illness",
+   "fieldtype": "Data",
+   "label": "If so, give the particulars and date"
+  },
+  {
+   "default": "0",
+   "fieldname": "checkbox_2",
+   "fieldtype": "Check",
+   "label": "Have you during the past five years had any illness or accident necessitating medical attention?"
+  },
+  {
+   "depends_on": "eval:doc.checkbox_2",
+   "fieldname": "past_illness",
+   "fieldtype": "Data",
+   "label": "If so, give full particulars"
+  },
+  {
+   "default": "0",
+   "fieldname": "checkbox_3",
+   "fieldtype": "Check",
+   "label": "Have you had any illness, accident, or injury that resulted in an insurance or benefit fund claim?"
+  },
+  {
+   "depends_on": "eval:doc.checkbox_3",
+   "fieldname": "previous_insurance_claim",
+   "fieldtype": "Data",
+   "label": "If yes, provide details."
+  },
+  {
+   "default": "0",
+   "fieldname": "checkbox_4",
+   "fieldtype": "Check",
+   "label": "Are there any pending claims, or are you entitled to claim benefits from another insurer, society, or fund for any illness or injury?"
+  },
+  {
+   "default": "0",
+   "fieldname": "checkbox_6",
+   "fieldtype": "Check",
+   "label": "If you are undergoing treatment for the injury or illness to which this claim relates, please state?"
+  },
+  {
+   "depends_on": "eval:doc.checkbox_6",
+   "fieldname": "nature_of_illness",
+   "fieldtype": "Data",
+   "label": "Nature of illness"
+  },
+  {
+   "depends_on": "eval:doc.checkbox_6",
+   "fieldname": "nature_of_treatment",
+   "fieldtype": "Data",
+   "label": "Nature of treatment"
+  },
+  {
+   "depends_on": "eval:doc.checkbox_6",
+   "fieldname": "name_of_hospital_concerned_if_any",
+   "fieldtype": "Data",
+   "label": "Name of hospital concerned if any"
+  },
+  {
+   "depends_on": "eval:doc.checkbox_6",
+   "fieldname": "other_details",
+   "fieldtype": "Data",
+   "label": "Name of consulting specialists and details of recommended treatment and specialist services received."
+  },
+  {
+   "fieldname": "surgical_section",
+   "fieldtype": "Section Break",
+   "hidden": 1
+  },
+  {
+   "fieldname": "amount",
+   "fieldtype": "Currency",
+   "label": "Entire Amount"
+  },
+  {
+   "fieldname": "agrahara_settled_amount",
+   "fieldtype": "Currency",
+   "label": "Agrahara Settled Amount"
+  },
+  {
+   "fieldname": "amount_s",
+   "fieldtype": "Currency",
+   "label": "Final Amount",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_farl5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "approved_amount_s",
+   "fieldtype": "Currency",
+   "label": "Approved Amount",
+   "read_only": 1
+  },
+  {
+   "fieldname": "file_section",
+   "fieldtype": "Section Break",
+   "hidden": 1
+  },
+  {
+   "fieldname": "claim_files",
+   "fieldtype": "Table",
+   "label": "Attach Bills and Support Documents",
+   "options": "Claim Files"
+  },
+  {
+   "fieldname": "amend_section",
+   "fieldtype": "Section Break",
+   "hidden": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Insurance Claim",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "attachment",
+   "fieldtype": "Attach",
+   "hidden": 1,
+   "label": "Attachment"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2026-11-04 13:04:17.922582",
+ "modified_by": "Administrator",
+ "module": "Staff MedClaim",
+ "name": "Insurance Claim",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

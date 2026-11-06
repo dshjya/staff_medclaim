@@ -1,0 +1,154 @@
+[
+ {
+  "doctype": "Workflow State",
+  "name": "To Confirm",
+  "workflow_state_name": "To Confirm",
+  "style": "Warning",
+  "icon": "question-sign",
+  "docstatus": 0
+ },
+ {
+  "doctype": "Workflow State",
+  "name": "Checked by Officer",
+  "workflow_state_name": "Checked by Officer",
+  "style": "Info",
+  "icon": "question-sign",
+  "docstatus": 0
+ },
+ {
+  "doctype": "Workflow State",
+  "name": "Checked by Manager",
+  "workflow_state_name": "Checked by Manager",
+  "style": "Primary",
+  "icon": "question-sign",
+  "docstatus": 0
+ },
+ {
+  "doctype": "Workflow State",
+  "name": "Pending Verification",
+  "workflow_state_name": "Pending Verification",
+  "style": "Warning",
+  "icon": "question-sign",
+  "docstatus": 0
+ },
+ {
+  "doctype": "Workflow State",
+  "name": "Verified",
+  "workflow_state_name": "Verified",
+  "style": "Info",
+  "icon": "question-sign",
+  "docstatus": 0
+ },
+ {
+  "doctype": "Workflow State",
+  "name": "Draft",
+  "workflow_state_name": "Draft",
+  "style": "Warning",
+  "icon": "question-sign",
+  "docstatus": 0
+ },
+ {
+  "doctype": "Workflow State",
+  "name": "Approved",
+  "workflow_state_name": "Approved",
+  "style": "Success",
+  "icon": "question-sign",
+  "docstatus": 0
+ },
+ {
+  "doctype": "Workflow State",
+  "name": "Rejected",
+  "workflow_state_name": "Rejected",
+  "style": "Danger",
+  "icon": "question-sign",
+  "docstatus": 0
+ },
+ {
+  "doctype": "Workflow State",
+  "name": "Cancelled",
+  "workflow_state_name": "Cancelled",
+  "style": "Danger",
+  "icon": "question-sign",
+  "docstatus": 0
+ },
+ {
+  "doctype": "Workflow State",
+  "name": "Submitted",
+  "workflow_state_name": "Submitted",
+  "style": "Primary",
+  "icon": "question-sign",
+  "docstatus": 0
+ },
+ {
+  "doctype": "Workflow State",
+  "name": "Partially Checked",
+  "workflow_state_name": "Partially Checked",
+  "style": "Warning",
+  "icon": "question-sign",
+  "docstatus": 0
+ },
+ {
+  "doctype": "Workflow State",
+  "name": "Accepted by Officer",
+  "workflow_state_name": "Accepted by Officer",
+  "style": "Info",
+  "icon": "question-sign",
+  "docstatus": 0
+ },
+ {
+  "doctype": "Workflow State",
+  "name": "Declined by Officer",
+  "workflow_state_name": "Declined by Officer",
+  "style": "Danger",
+  "icon": "question-sign",
+  "docstatus": 0
+ },
+ {
+  "doctype": "Workflow State",
+  "name": "Accepted by Manager",
+  "workflow_state_name": "Accepted by Manager",
+  "style": "Success",
+  "icon": "question-sign",
+  "docstatus": 0
+ },
+ {
+  "doctype": "Workflow State",
+  "name": "Declined by Manager",
+  "workflow_state_name": "Declined by Manager",
+  "style": "Danger",
+  "icon": "question-sign",
+  "docstatus": 0
+ },
+ {
+  "doctype": "Workflow State",
+  "name": "Sent to Doctor",
+  "workflow_state_name": "Sent to Doctor",
+  "style": "Primary",
+  "icon": "question-sign",
+  "docstatus": 0
+ },
+ {
+  "doctype": "Workflow State",
+  "name": "Balance BF",
+  "workflow_state_name": "Balance BF",
+  "style": "Inverse",
+  "icon": "question-sign",
+  "docstatus": 0
+ },
+ {
+  "doctype": "Workflow State",
+  "name": "Cancelled by Manager",
+  "workflow_state_name": "Cancelled by Manager",
+  "style": "Danger",
+  "icon": "question-sign",
+  "docstatus": 0
+ },
+ {
+  "doctype": "Workflow State",
+  "name": "Cancelled by Officer",
+  "workflow_state_name": "Cancelled by Officer",
+  "style": "Danger",
+  "icon": "question-sign",
+  "docstatus": 0
+ }
+]

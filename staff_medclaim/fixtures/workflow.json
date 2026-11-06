@@ -1,0 +1,580 @@
+[
+ {
+  "doctype": "Workflow",
+  "name": "Claim Approval Workflow",
+  "workflow_name": "Claim Approval Workflow",
+  "document_type": "Claim Approval",
+  "is_active": 1,
+  "override_status": 0,
+  "send_email_alert": 0,
+  "workflow_state_field": "claim_status",
+  "docstatus": 0,
+  "states": [
+   {
+    "doctype": "Workflow Document State",
+    "state": "To Confirm",
+    "doc_status": "0",
+    "allow_edit": "Insurance User",
+    "is_optional_state": 0,
+    "avoid_status_override": 0
+   },
+   {
+    "doctype": "Workflow Document State",
+    "state": "Checked by Officer",
+    "doc_status": "0",
+    "allow_edit": "Insurance Manager",
+    "is_optional_state": 0,
+    "avoid_status_override": 0
+   },
+   {
+    "doctype": "Workflow Document State",
+    "state": "Checked by Manager",
+    "doc_status": "0",
+    "allow_edit": "Insurance Manager",
+    "is_optional_state": 0,
+    "avoid_status_override": 0
+   },
+   {
+    "doctype": "Workflow Document State",
+    "state": "Approved",
+    "doc_status": "1",
+    "allow_edit": "Insurance Manager",
+    "is_optional_state": 0,
+    "avoid_status_override": 0
+   },
+   {
+    "doctype": "Workflow Document State",
+    "state": "Rejected",
+    "doc_status": "1",
+    "allow_edit": "Insurance Manager",
+    "is_optional_state": 0,
+    "avoid_status_override": 0,
+    "update_field": "rejected",
+    "update_value": "1"
+   },
+   {
+    "doctype": "Workflow Document State",
+    "state": "Cancelled",
+    "doc_status": "2",
+    "allow_edit": "Insurance Manager",
+    "is_optional_state": 0,
+    "avoid_status_override": 0
+   }
+  ],
+  "transitions": [
+   {
+    "doctype": "Workflow Transition",
+    "state": "To Confirm",
+    "action": "Check",
+    "next_state": "Checked by Officer",
+    "allowed": "Insurance User",
+    "allow_self_approval": 1
+   },
+   {
+    "doctype": "Workflow Transition",
+    "state": "Checked by Officer",
+    "action": "Revoke",
+    "next_state": "To Confirm",
+    "allowed": "Insurance User",
+    "allow_self_approval": 1
+   },
+   {
+    "doctype": "Workflow Transition",
+    "state": "Checked by Officer",
+    "action": "Check",
+    "next_state": "Checked by Manager",
+    "allowed": "Insurance Manager",
+    "allow_self_approval": 1
+   },
+   {
+    "doctype": "Workflow Transition",
+    "state": "Checked by Manager",
+    "action": "Revoke",
+    "next_state": "Checked by Officer",
+    "allowed": "Insurance Manager",
+    "allow_self_approval": 1
+   },
+   {
+    "doctype": "Workflow Transition",
+    "state": "Checked by Manager",
+    "action": "Approve",
+    "next_state": "Approved",
+    "allowed": "Insurance Manager",
+    "allow_self_approval": 1
+   },
+   {
+    "doctype": "Workflow Transition",
+    "state": "Checked by Manager",
+    "action": "Reject",
+    "next_state": "Rejected",
+    "allowed": "Insurance Manager",
+    "allow_self_approval": 1
+   },
+   {
+    "doctype": "Workflow Transition",
+    "state": "Approved",
+    "action": "Cancel",
+    "next_state": "Cancelled",
+    "allowed": "Insurance Manager",
+    "allow_self_approval": 1
+   },
+   {
+    "doctype": "Workflow Transition",
+    "state": "Rejected",
+    "action": "Cancel",
+    "next_state": "Cancelled",
+    "allowed": "Insurance Manager",
+    "allow_self_approval": 1
+   }
+  ]
+ },
+ {
+  "doctype": "Workflow",
+  "name": "Employee Details Workflow",
+  "workflow_name": "Employee Details Workflow",
+  "document_type": "Employee Details",
+  "is_active": 1,
+  "override_status": 0,
+  "send_email_alert": 0,
+  "workflow_state_field": "workflow_state",
+  "docstatus": 0,
+  "states": [
+   {
+    "doctype": "Workflow Document State",
+    "state": "Draft",
+    "doc_status": "0",
+    "allow_edit": "Employee",
+    "is_optional_state": 0,
+    "avoid_status_override": 0
+   },
+   {
+    "doctype": "Workflow Document State",
+    "state": "Pending Verification",
+    "doc_status": "0",
+    "allow_edit": "HR User",
+    "is_optional_state": 0,
+    "avoid_status_override": 0
+   },
+   {
+    "doctype": "Workflow Document State",
+    "state": "Verified",
+    "doc_status": "0",
+    "allow_edit": "HR Manager",
+    "is_optional_state": 0,
+    "avoid_status_override": 0,
+    "update_field": "verify",
+    "update_value": "1"
+   },
+   {
+    "doctype": "Workflow Document State",
+    "state": "Approved",
+    "doc_status": "1",
+    "allow_edit": "HR Manager",
+    "is_optional_state": 0,
+    "avoid_status_override": 0,
+    "update_field": "approve",
+    "update_value": "1"
+   },
+   {
+    "doctype": "Workflow Document State",
+    "state": "Cancelled",
+    "doc_status": "2",
+    "allow_edit": "HR Manager",
+    "is_optional_state": 0,
+    "avoid_status_override": 0
+   }
+  ],
+  "transitions": [
+   {
+    "doctype": "Workflow Transition",
+    "state": "Draft",
+    "action": "Submit for Verification",
+    "next_state": "Pending Verification",
+    "allowed": "Employee",
+    "allow_self_approval": 1
+   },
+   {
+    "doctype": "Workflow Transition",
+    "state": "Pending Verification",
+    "action": "Return",
+    "next_state": "Draft",
+    "allowed": "HR User",
+    "allow_self_approval": 1
+   },
+   {
+    "doctype": "Workflow Transition",
+    "state": "Pending Verification",
+    "action": "Verify",
+    "next_state": "Verified",
+    "allowed": "HR User",
+    "allow_self_approval": 1
+   },
+   {
+    "doctype": "Workflow Transition",
+    "state": "Verified",
+    "action": "Revoke",
+    "next_state": "Pending Verification",
+    "allowed": "HR Manager",
+    "allow_self_approval": 1
+   },
+   {
+    "doctype": "Workflow Transition",
+    "state": "Verified",
+    "action": "Approve",
+    "next_state": "Approved",
+    "allowed": "HR Manager",
+    "allow_self_approval": 1
+   },
+   {
+    "doctype": "Workflow Transition",
+    "state": "Approved",
+    "action": "Cancel",
+    "next_state": "Cancelled",
+    "allowed": "HR Manager",
+    "allow_self_approval": 1
+   }
+  ]
+ },
+ {
+  "doctype": "Workflow",
+  "name": "Insurance Claim Workflow",
+  "workflow_name": "Insurance Claim Workflow",
+  "document_type": "Insurance Claim",
+  "is_active": 1,
+  "override_status": 0,
+  "send_email_alert": 0,
+  "workflow_state_field": "claim_status",
+  "docstatus": 0,
+  "states": [
+   {
+    "doctype": "Workflow Document State",
+    "state": "Draft",
+    "doc_status": "0",
+    "allow_edit": "Insurance Member",
+    "is_optional_state": 0,
+    "avoid_status_override": 0
+   },
+   {
+    "doctype": "Workflow Document State",
+    "state": "Submitted",
+    "doc_status": "1",
+    "allow_edit": "Insurance User",
+    "is_optional_state": 0,
+    "avoid_status_override": 0
+   },
+   {
+    "doctype": "Workflow Document State",
+    "state": "Partially Checked",
+    "doc_status": "1",
+    "allow_edit": "Insurance User",
+    "is_optional_state": 0,
+    "avoid_status_override": 0
+   },
+   {
+    "doctype": "Workflow Document State",
+    "state": "Accepted by Officer",
+    "doc_status": "1",
+    "allow_edit": "Insurance Manager",
+    "is_optional_state": 0,
+    "avoid_status_override": 0
+   },
+   {
+    "doctype": "Workflow Document State",
+    "state": "Declined by Officer",
+    "doc_status": "1",
+    "allow_edit": "Insurance Manager",
+    "is_optional_state": 0,
+    "avoid_status_override": 0
+   },
+   {
+    "doctype": "Workflow Document State",
+    "state": "Accepted by Manager",
+    "doc_status": "1",
+    "allow_edit": "Insurance Manager",
+    "is_optional_state": 0,
+    "avoid_status_override": 0
+   },
+   {
+    "doctype": "Workflow Document State",
+    "state": "Declined by Manager",
+    "doc_status": "1",
+    "allow_edit": "Insurance Manager",
+    "is_optional_state": 0,
+    "avoid_status_override": 0
+   },
+   {
+    "doctype": "Workflow Document State",
+    "state": "Sent to Doctor",
+    "doc_status": "1",
+    "allow_edit": "Insurance Manager",
+    "is_optional_state": 0,
+    "avoid_status_override": 0
+   },
+   {
+    "doctype": "Workflow Document State",
+    "state": "Approved",
+    "doc_status": "1",
+    "allow_edit": "Insurance Manager",
+    "is_optional_state": 0,
+    "avoid_status_override": 0
+   },
+   {
+    "doctype": "Workflow Document State",
+    "state": "Rejected",
+    "doc_status": "1",
+    "allow_edit": "Insurance Manager",
+    "is_optional_state": 0,
+    "avoid_status_override": 0
+   },
+   {
+    "doctype": "Workflow Document State",
+    "state": "Balance BF",
+    "doc_status": "1",
+    "allow_edit": "Insurance Manager",
+    "is_optional_state": 0,
+    "avoid_status_override": 0
+   },
+   {
+    "doctype": "Workflow Document State",
+    "state": "Cancelled by Manager",
+    "doc_status": "2",
+    "allow_edit": "Insurance Manager",
+    "is_optional_state": 0,
+    "avoid_status_override": 0
+   },
+   {
+    "doctype": "Workflow Document State",
+    "state": "Cancelled by Officer",
+    "doc_status": "2",
+    "allow_edit": "Insurance Manager",
+    "is_optional_state": 0,
+    "avoid_status_override": 0
+   }
+  ],
+  "transitions": [
+   {
+    "doctype": "Workflow Transition",
+    "state": "Draft",
+    "action": "Submit",
+    "next_state": "Submitted",
+    "allowed": "Insurance Member",
+    "allow_self_approval": 1
+   },
+   {
+    "doctype": "Workflow Transition",
+    "state": "Draft",
+    "action": "Submit",
+    "next_state": "Submitted",
+    "allowed": "Insurance User",
+    "allow_self_approval": 1
+   },
+   {
+    "doctype": "Workflow Transition",
+    "state": "Draft",
+    "action": "Submit",
+    "next_state": "Submitted",
+    "allowed": "Insurance Manager",
+    "allow_self_approval": 1
+   },
+   {
+    "doctype": "Workflow Transition",
+    "state": "Submitted",
+    "action": "Accept",
+    "next_state": "Accepted by Officer",
+    "allowed": "Insurance User",
+    "allow_self_approval": 0
+   },
+   {
+    "doctype": "Workflow Transition",
+    "state": "Submitted",
+    "action": "Decline",
+    "next_state": "Declined by Officer",
+    "allowed": "Insurance User",
+    "allow_self_approval": 0
+   },
+   {
+    "doctype": "Workflow Transition",
+    "state": "Partially Checked",
+    "action": "Accept",
+    "next_state": "Accepted by Officer",
+    "allowed": "Insurance User",
+    "allow_self_approval": 0
+   },
+   {
+    "doctype": "Workflow Transition",
+    "state": "Partially Checked",
+    "action": "Decline",
+    "next_state": "Declined by Officer",
+    "allowed": "Insurance User",
+    "allow_self_approval": 0
+   },
+   {
+    "doctype": "Workflow Transition",
+    "state": "Submitted",
+    "action": "Partially Check",
+    "next_state": "Partially Checked",
+    "allowed": "Insurance User",
+    "allow_self_approval": 0
+   },
+   {
+    "doctype": "Workflow Transition",
+    "state": "Accepted by Officer",
+    "action": "Revoke",
+    "next_state": "Submitted",
+    "allowed": "Insurance User",
+    "allow_self_approval": 0
+   },
+   {
+    "doctype": "Workflow Transition",
+    "state": "Declined by Officer",
+    "action": "Revoke",
+    "next_state": "Submitted",
+    "allowed": "Insurance User",
+    "allow_self_approval": 0
+   },
+   {
+    "doctype": "Workflow Transition",
+    "state": "Accepted by Officer",
+    "action": "Accept",
+    "next_state": "Accepted by Manager",
+    "allowed": "Insurance Manager",
+    "allow_self_approval": 0
+   },
+   {
+    "doctype": "Workflow Transition",
+    "state": "Accepted by Officer",
+    "action": "Decline",
+    "next_state": "Declined by Manager",
+    "allowed": "Insurance Manager",
+    "allow_self_approval": 0
+   },
+   {
+    "doctype": "Workflow Transition",
+    "state": "Declined by Officer",
+    "action": "Accept",
+    "next_state": "Accepted by Manager",
+    "allowed": "Insurance Manager",
+    "allow_self_approval": 0
+   },
+   {
+    "doctype": "Workflow Transition",
+    "state": "Accepted by Manager",
+    "action": "Revoke",
+    "next_state": "Accepted by Officer",
+    "allowed": "Insurance Manager",
+    "allow_self_approval": 0,
+    "condition": "not doc.group_no"
+   },
+   {
+    "doctype": "Workflow Transition",
+    "state": "Declined by Manager",
+    "action": "Revoke",
+    "next_state": "Accepted by Officer",
+    "allowed": "Insurance Manager",
+    "allow_self_approval": 0
+   },
+   {
+    "doctype": "Workflow Transition",
+    "state": "Accepted by Manager",
+    "action": "Send to Doctor",
+    "next_state": "Sent to Doctor",
+    "allowed": "Insurance User",
+    "allow_self_approval": 1
+   },
+   {
+    "doctype": "Workflow Transition",
+    "state": "Accepted by Manager",
+    "action": "Send to Doctor",
+    "next_state": "Sent to Doctor",
+    "allowed": "Insurance Manager",
+    "allow_self_approval": 1
+   },
+   {
+    "doctype": "Workflow Transition",
+    "state": "Accepted by Manager",
+    "action": "Approve",
+    "next_state": "Approved",
+    "allowed": "Insurance Manager",
+    "allow_self_approval": 1
+   },
+   {
+    "doctype": "Workflow Transition",
+    "state": "Accepted by Manager",
+    "action": "Reject",
+    "next_state": "Rejected",
+    "allowed": "Insurance Manager",
+    "allow_self_approval": 1
+   },
+   {
+    "doctype": "Workflow Transition",
+    "state": "Sent to Doctor",
+    "action": "Approve",
+    "next_state": "Approved",
+    "allowed": "Insurance Manager",
+    "allow_self_approval": 1
+   },
+   {
+    "doctype": "Workflow Transition",
+    "state": "Sent to Doctor",
+    "action": "Reject",
+    "next_state": "Rejected",
+    "allowed": "Insurance Manager",
+    "allow_self_approval": 1
+   },
+   {
+    "doctype": "Workflow Transition",
+    "state": "Submitted",
+    "action": "Cancel",
+    "next_state": "Cancelled by Manager",
+    "allowed": "Insurance Manager",
+    "allow_self_approval": 0,
+    "condition": "not doc.group_no"
+   },
+   {
+    "doctype": "Workflow Transition",
+    "state": "Partially Checked",
+    "action": "Cancel",
+    "next_state": "Cancelled by Manager",
+    "allowed": "Insurance Manager",
+    "allow_self_approval": 0,
+    "condition": "not doc.group_no"
+   },
+   {
+    "doctype": "Workflow Transition",
+    "state": "Accepted by Officer",
+    "action": "Cancel",
+    "next_state": "Cancelled by Manager",
+    "allowed": "Insurance Manager",
+    "allow_self_approval": 0,
+    "condition": "not doc.group_no"
+   },
+   {
+    "doctype": "Workflow Transition",
+    "state": "Declined by Officer",
+    "action": "Cancel",
+    "next_state": "Cancelled by Manager",
+    "allowed": "Insurance Manager",
+    "allow_self_approval": 0,
+    "condition": "not doc.group_no"
+   },
+   {
+    "doctype": "Workflow Transition",
+    "state": "Accepted by Manager",
+    "action": "Cancel",
+    "next_state": "Cancelled by Manager",
+    "allowed": "Insurance Manager",
+    "allow_self_approval": 0,
+    "condition": "not doc.group_no"
+   },
+   {
+    "doctype": "Workflow Transition",
+    "state": "Declined by Manager",
+    "action": "Cancel",
+    "next_state": "Cancelled by Manager",
+    "allowed": "Insurance Manager",
+    "allow_self_approval": 0,
+    "condition": "not doc.group_no"
+   }
+  ]
+ }
+]

@@ -1,0 +1,189 @@
+{
+ "actions": [],
+ "allow_import": 1,
+ "autoname": "format:{employee}-{fiscal_year}",
+ "creation": "2026-06-01 05:51:17.582715",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "employee",
+  "employee_name",
+  "department",
+  "division",
+  "employment_type",
+  "scheme_details_section",
+  "insurance_scheme",
+  "monthly_deduction",
+  "enrollment_date",
+  "agrahara_member",
+  "dependents_section",
+  "dependents",
+  "notes_section",
+  "remarks",
+  "validity",
+  "member_status",
+  "fiscal_year",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "employee",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Employee",
+   "options": "Employee",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "employee.first_name",
+   "fieldname": "employee_name",
+   "fieldtype": "Data",
+   "label": "Employee Name",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "employee.department",
+   "fieldname": "department",
+   "fieldtype": "Link",
+   "label": "Department",
+   "options": "Department",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "employee.branch",
+   "fieldname": "division",
+   "fieldtype": "Link",
+   "label": "Division",
+   "options": "Branch",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "employee.employment_type",
+   "fieldname": "employment_type",
+   "fieldtype": "Link",
+   "label": "Employment Type",
+   "options": "Employment Type",
+   "read_only": 1
+  },
+  {
+   "fieldname": "scheme_details_section",
+   "fieldtype": "Section Break",
+   "label": "Scheme Details"
+  },
+  {
+   "fieldname": "insurance_scheme",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Insurance Scheme",
+   "options": "Support Scheme",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "insurance_scheme.monthly_deduction",
+   "fieldname": "monthly_deduction",
+   "fieldtype": "Currency",
+   "label": "Monthly Deduction",
+   "read_only": 1
+  },
+  {
+   "fieldname": "enrollment_date",
+   "fieldtype": "Data",
+   "label": "Enrollment Date",
+   "reqd": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "agrahara_member",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Agrahara Member"
+  },
+  {
+   "fieldname": "dependents_section",
+   "fieldtype": "Section Break",
+   "label": "Dependents"
+  },
+  {
+   "fieldname": "dependents",
+   "fieldtype": "Table",
+   "label": "Dependents",
+   "options": "Insurance Dependent",
+   "read_only": 1
+  },
+  {
+   "fieldname": "notes_section",
+   "fieldtype": "Section Break",
+   "label": "Notes"
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Small Text",
+   "label": "Remarks"
+  },
+  {
+   "fieldname": "validity",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Validity"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "member_status",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Member Status",
+   "options": "To Confirm\nActive\nSuspended\nInactive"
+  },
+  {
+   "fieldname": "fiscal_year",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Fiscal Year",
+   "read_only": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Insurance Member",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2026-11-04 13:08:32.256100",
+ "modified_by": "Administrator",
+ "module": "Staff MedClaim",
+ "name": "Insurance Member",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

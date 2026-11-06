@@ -1,0 +1,25 @@
+[project]
+name = "staff_medclaim"
+authors = [
+    { name = "Staff MedClaim", email = "you@example.com"}
+]
+description = "Medical insurance claim management for employees and their dependents"
+requires-python = ">=3.14"
+readme = "README.md"
+dynamic = ["version"]
+dependencies = [
+    # "frappe~=16.0.0" # Installed and managed by bench.
+]
+
+[build-system]
+requires = ["flit_core >=3.4,<4"]
+build-backend = "flit_core.buildapi"
+
+# Checked by bench when the app is installed
+[tool.bench.frappe-dependencies]
+frappe = ">=16.0.0-dev,<17.0.0-dev"
+erpnext = ">=16.0.0-dev,<17.0.0-dev"
+
+# These dependencies are only installed when developer mode is enabled
+[tool.bench.dev-dependencies]
+# package_name = "~=1.1.0"

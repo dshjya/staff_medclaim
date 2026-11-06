@@ -1,0 +1,43 @@
+[
+ {
+  "doctype": "Notification",
+  "name": "Insurance Claim Status Changed",
+  "subject": "Your medical claim {{ doc.name }} is now: {{ doc.claim_status }}",
+  "document_type": "Insurance Claim",
+  "event": "Value Change",
+  "value_changed": "claim_status",
+  "channel": "Email",
+  "enabled": 1,
+  "module": "Staff MedClaim",
+  "message_type": "HTML",
+  "send_system_notification": 1,
+  "recipients": [
+   {
+    "doctype": "Notification Recipient",
+    "receiver_by_document_field": "owner"
+   }
+  ],
+  "message": "<p>Dear {{ doc.employee_name or \"Member\" }},</p><p>The status of your claim <b>{{ doc.name }}</b> is now <b>{{ doc.claim_status }}</b>.</p><p>Open the Staff MedClaim workspace to see the details.</p>",
+  "docstatus": 0
+ },
+ {
+  "doctype": "Notification",
+  "name": "Insurance Claim Submitted",
+  "subject": "New medical claim {{ doc.name }} from {{ doc.employee_name }}",
+  "document_type": "Insurance Claim",
+  "event": "Submit",
+  "channel": "Email",
+  "enabled": 1,
+  "module": "Staff MedClaim",
+  "message_type": "HTML",
+  "send_system_notification": 1,
+  "recipients": [
+   {
+    "doctype": "Notification Recipient",
+    "receiver_by_role": "Insurance User"
+   }
+  ],
+  "message": "<p>A new claim <b>{{ doc.name }}</b> was submitted by {{ doc.employee_name }} ({{ doc.claim_type }}) and is waiting for checking.</p>",
+  "docstatus": 0
+ }
+]

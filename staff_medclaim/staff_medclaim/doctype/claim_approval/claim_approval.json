@@ -1,0 +1,278 @@
+{
+ "actions": [],
+ "allow_import": 1,
+ "autoname": "format:HR-CAP-{YYYY}-{#####}",
+ "creation": "2026-06-01 21:25:44.447597",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "payment_processing_section",
+  "balance_settlement",
+  "claim_status",
+  "checked_by_officer",
+  "column_break_gkbqo",
+  "checked_by_manager",
+  "column_break_yflzd",
+  "purchase_order",
+  "insurance_claim_group_details_section",
+  "claim_group",
+  "summary",
+  "employee",
+  "member_name",
+  "requested_amount",
+  "rejected",
+  "approved_amount",
+  "opd_section",
+  "claim_nos",
+  "bill_approved_amount",
+  "view_category_balences",
+  "amount_for_catagory",
+  "surgical_section",
+  "claim_no",
+  "column_break_twmgb",
+  "category",
+  "column_break_qs1ku",
+  "limit_n",
+  "column_break_liaqu",
+  "previous_approved",
+  "column_break_wq29e",
+  "balance_n",
+  "remark_section",
+  "remark",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "payment_processing_section",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "balance_settlement",
+   "fieldtype": "Check",
+   "hidden": 1,
+   "label": "Balance Settlement",
+   "read_only": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "claim_status",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Approval Status",
+   "options": "To Confirm\nChecked by Manager\nChecked by Officer\nApproved\nRejected",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "checked_by_officer",
+   "fieldtype": "Check",
+   "label": "Checked by Officer"
+  },
+  {
+   "fieldname": "column_break_gkbqo",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "checked_by_manager",
+   "fieldtype": "Check",
+   "label": "Checked by Manager"
+  },
+  {
+   "fieldname": "column_break_yflzd",
+   "fieldtype": "Column Break"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "purchase_order",
+   "fieldtype": "Link",
+   "label": " Purchase Order",
+   "options": "Purchase Order",
+   "read_only": 1
+  },
+  {
+   "fieldname": "insurance_claim_group_details_section",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "claim_group",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Claim Group",
+   "options": "Employee Claim Group",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "claim_group.summary_id",
+   "fieldname": "summary",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Summary",
+   "read_only": 1
+  },
+  {
+   "fieldname": "employee",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Member",
+   "options": "Insurance Member",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "employee.employee_name",
+   "fieldname": "member_name",
+   "fieldtype": "Data",
+   "label": "Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "requested_amount",
+   "fieldtype": "Currency",
+   "label": "Requested Total Amount",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "rejected",
+   "fieldtype": "Check",
+   "label": "Rejected"
+  },
+  {
+   "fieldname": "approved_amount",
+   "fieldtype": "Currency",
+   "label": "Approved Total Amount"
+  },
+  {
+   "fieldname": "opd_section",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "claim_nos",
+   "fieldtype": "Table MultiSelect",
+   "hidden": 1,
+   "label": "Claim No/s",
+   "options": "Claim of Group"
+  },
+  {
+   "fieldname": "bill_approved_amount",
+   "fieldtype": "Table",
+   "label": "Bill Approved Amount",
+   "options": "Approved Bill Amounts"
+  },
+  {
+   "default": "0",
+   "fieldname": "view_category_balences",
+   "fieldtype": "Check",
+   "label": "View Category Balences"
+  },
+  {
+   "fieldname": "amount_for_catagory",
+   "fieldtype": "HTML",
+   "label": "Amount for Catagory"
+  },
+  {
+   "fieldname": "surgical_section",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "claim_no",
+   "fieldtype": "Link",
+   "label": "Claim No",
+   "options": "Insurance Claim",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_twmgb",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "category",
+   "fieldtype": "Data",
+   "label": "Category",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_qs1ku",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "limit_n",
+   "fieldtype": "Currency",
+   "label": "Limit",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_liaqu",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "previous_approved",
+   "fieldtype": "Currency",
+   "label": "Previous Approved",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_wq29e",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "balance_n",
+   "fieldtype": "Currency",
+   "label": "Balance",
+   "read_only": 1
+  },
+  {
+   "fieldname": "remark_section",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "remark",
+   "fieldtype": "Small Text",
+   "label": "Remark"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Claim Approval",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2026-11-04 13:07:17.959852",
+ "modified_by": "Administrator",
+ "module": "Staff MedClaim",
+ "name": "Claim Approval",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

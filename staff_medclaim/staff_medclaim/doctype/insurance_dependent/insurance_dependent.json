@@ -1,0 +1,53 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2026-05-25 12:07:57.568565",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "name_with_initials",
+  "age",
+  "relationship",
+  "cert"
+ ],
+ "fields": [
+  {
+   "fieldname": "name_with_initials",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Name with Initials"
+  },
+  {
+   "fieldname": "age",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Age"
+  },
+  {
+   "fieldname": "relationship",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Relationship"
+  },
+  {
+   "fieldname": "cert",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Marriage/ Birth Certificate"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2026-11-04 13:11:18.361036",
+ "modified_by": "Administrator",
+ "module": "Staff MedClaim",
+ "name": "Insurance Dependent",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

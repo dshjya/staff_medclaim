@@ -1,0 +1,143 @@
+{
+ "app": "staff_medclaim",
+ "charts": [],
+ "content": "[{\"id\":\"wDzBzOqNas\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Claims</b></span>\",\"col\":12}},{\"id\":\"uiUtW7p3YP\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Insurance Claim\",\"col\":3}},{\"id\":\"bCMsntqWvA\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Claim Approval\",\"col\":3}},{\"id\":\"N6sc8ZXGoj\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Claim Summary\",\"col\":3}},{\"id\":\"sCeRTa0E4D\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Employee Claim Group\",\"col\":3}},{\"id\":\"XCMEbiozwH\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"OytF7WOYog\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Members</b></span>\",\"col\":12}},{\"id\":\"fhaM4hQ6Vj\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Insurance Member\",\"col\":3}},{\"id\":\"NplaG4gjyc\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Employee Details\",\"col\":3}},{\"id\":\"CTCcbmP5Fg\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"nzghA0o22A\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Setup</b></span>\",\"col\":12}},{\"id\":\"nlPZ1mAbss\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Insurance Form\",\"col\":3}},{\"id\":\"he9sEHDKFE\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Covers and Benefits\",\"col\":3}},{\"id\":\"eNPStCXTdu\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Support Scheme\",\"col\":3}},{\"id\":\"kSyynCSNny\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Insurance Scheme\",\"col\":3}},{\"id\":\"Md3bMj7QnF\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Insurance Period\",\"col\":3}},{\"id\":\"00PNU4FMXF\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"nJvSU4gb5T\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Reports</b></span>\",\"col\":12}},{\"id\":\"9Y7jlMUh6o\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Monthly Group Report - Insurance\",\"col\":3}},{\"id\":\"mBlfecjQWV\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Monthly Group Report - Insurance Summary\",\"col\":3}},{\"id\":\"zUh1zhxlUx\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Monthly Group Report - Insurance Approved Summary\",\"col\":3}},{\"id\":\"ble6zWKzTI\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Details Report - Medical Claim\",\"col\":3}},{\"id\":\"c9vOz7kdcy\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Summery Report - Medical Claim\",\"col\":3}},{\"id\":\"0B5i7k2mKM\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Purchase Order Report - Medical Claim\",\"col\":3}},{\"id\":\"8z0d3GH8tM\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Insurance Scheme Details\",\"col\":3}},{\"id\":\"KsjArLzfQ5\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Insurance Summary Check\",\"col\":3}},{\"id\":\"Mss7BSeY3q\",\"type\":\"spacer\",\"data\":{\"col\":12}}]",
+ "creation": "2026-11-05 10:00:00.000000",
+ "custom_blocks": [],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 0,
+ "indicator_color": "blue",
+ "is_hidden": 0,
+ "label": "Staff MedClaim",
+ "links": [],
+ "modified": "2026-11-05 10:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Staff MedClaim",
+ "name": "Staff MedClaim",
+ "number_cards": [],
+ "owner": "Administrator",
+ "parent_page": "",
+ "public": 1,
+ "quick_lists": [],
+ "roles": [],
+ "sequence_id": 1.0,
+ "shortcuts": [
+  {
+   "doc_view": "List",
+   "label": "Insurance Claim",
+   "link_to": "Insurance Claim",
+   "type": "DocType"
+  },
+  {
+   "doc_view": "List",
+   "label": "Claim Approval",
+   "link_to": "Claim Approval",
+   "type": "DocType"
+  },
+  {
+   "doc_view": "List",
+   "label": "Claim Summary",
+   "link_to": "Claim Summary",
+   "type": "DocType"
+  },
+  {
+   "doc_view": "List",
+   "label": "Employee Claim Group",
+   "link_to": "Employee Claim Group",
+   "type": "DocType"
+  },
+  {
+   "doc_view": "List",
+   "label": "Insurance Member",
+   "link_to": "Insurance Member",
+   "type": "DocType"
+  },
+  {
+   "doc_view": "List",
+   "label": "Employee Details",
+   "link_to": "Employee Details",
+   "type": "DocType"
+  },
+  {
+   "doc_view": "List",
+   "label": "Insurance Form",
+   "link_to": "Insurance Form",
+   "type": "DocType"
+  },
+  {
+   "doc_view": "List",
+   "label": "Covers and Benefits",
+   "link_to": "Covers and Benefits",
+   "type": "DocType"
+  },
+  {
+   "doc_view": "List",
+   "label": "Support Scheme",
+   "link_to": "Support Scheme",
+   "type": "DocType"
+  },
+  {
+   "doc_view": "List",
+   "label": "Insurance Scheme",
+   "link_to": "Insurance Scheme",
+   "type": "DocType"
+  },
+  {
+   "doc_view": "List",
+   "label": "Insurance Period",
+   "link_to": "Insurance Period",
+   "type": "DocType"
+  },
+  {
+   "label": "Monthly Group Report - Insurance",
+   "link_to": "Monthly Group Report - Insurance",
+   "report_ref_doctype": "Insurance Claim",
+   "type": "Report"
+  },
+  {
+   "label": "Monthly Group Report - Insurance Summary",
+   "link_to": "Monthly Group Report - Insurance Summary",
+   "report_ref_doctype": "Insurance Claim",
+   "type": "Report"
+  },
+  {
+   "label": "Monthly Group Report - Insurance Approved Summary",
+   "link_to": "Monthly Group Report - Insurance Approved Summary",
+   "report_ref_doctype": "Claim Approval",
+   "type": "Report"
+  },
+  {
+   "label": "Details Report - Medical Claim",
+   "link_to": "Details Report - Medical Claim",
+   "report_ref_doctype": "Claim Approval",
+   "type": "Report"
+  },
+  {
+   "label": "Summery Report - Medical Claim",
+   "link_to": "Summery Report - Medical Claim",
+   "report_ref_doctype": "Claim Approval",
+   "type": "Report"
+  },
+  {
+   "label": "Purchase Order Report - Medical Claim",
+   "link_to": "Purchase Order Report - Medical Claim",
+   "report_ref_doctype": "Claim Approval",
+   "type": "Report"
+  },
+  {
+   "label": "Insurance Scheme Details",
+   "link_to": "Insurance Scheme Details",
+   "report_ref_doctype": "Insurance Member",
+   "type": "Report"
+  },
+  {
+   "label": "Insurance Summary Check",
+   "link_to": "Insurance Summary Check",
+   "report_ref_doctype": "Insurance Claim",
+   "type": "Report"
+  }
+ ],
+ "title": "Staff MedClaim"
+}
